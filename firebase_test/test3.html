@@ -11,39 +11,30 @@
 
   <p><a href="https://noxtest.firebaseio.com/test/users/james" rel="modal:open">Open linkmodal</a></p>
   <form method="POST" id="test-post">
+    <input id="name" placeholder="name">
+    <select id="cohort">
+      <option value="august">August</option>
+      <option value="september">September</option>
+    </select>
+    <input id="message" placeholder="message">
   <button type="submit">PUSH THE BUTTON</button>
 </form>
   <script src="script/jquery-2.1.1.min.js"></script>
   <script src="script/jquery.modal.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="https://cdn.firebase.com/js/client/1.0.21/firebase.js"></script>
   <script>
-  var test = new Firebase('https://noxtest.firebaseio.com/test');
-  var test2 = new Firebase('https://noxtest.firebaseio.com');
+  var test = new Firebase('https://noxtest.firebaseio.com/test'); //sets which Firebase branch to post to
 
-    var usersRef = test.child("users");
   $(document).ready( function() {
    $('#test-post').on('submit', function(e) {
     e.preventDefault();
-      usersRef.update({
-        ekips: {
-          cohort: "August",
-          message: "Damn, this took a lot of work to build"
-        },
-
-        ethel: {
-          cohort: "August",
-          message: "Seriously this wasn't easy"
-        },
-
-        spike: {
-          cohort: "June",
-          message: "I am Nikesh"
-        }
-        }).fail(function() {
-      console.log("failed");
-    });
+      test.push({
+          name: $('#name').val(),
+          cohort: $("#cohort").val(),
+          message: $("#message").val()
+      })
     });
   })
-  </script>
+</script>
 </body>
 </html>
