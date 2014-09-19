@@ -17,7 +17,7 @@ var inline_template = $('#message-template').html();
 
   $(document).ready( function() {
     getUsers();
-   $('#post').on('submit', function(e) {
+   $('#test-post').on('submit', function(e) {
     e.preventDefault();
     var postName = $('#name').val();
       usersRef.push({
