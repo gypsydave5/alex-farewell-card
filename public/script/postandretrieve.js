@@ -10,16 +10,17 @@ var inline_template = $('#message-template').html();
 			var users = user.val();
 			for(name in users){
 				var maker = users[name];
-				var template = "<article id='" + name + "'><h1>{{name}}</h1><p>{{message}}</p><h2>{{cohort}}</h2></article><br>"
+				var template = "<article class='this-message' id='" + name + "'><h1>{{name}}</h1><p>{{message}}</p><h2>{{cohort}}</h2><br></article>";
 				$('.message-container').prepend(Mustache.render(template, maker));
-			}
+			   $.modal.close();
+      }
 		})
 	}
 
 
   $(document).ready( function() {
     getUsers();
-   $('#test-post').on('submit', function(e) {
+   $('#test-post').on("submit", function(e) {
     e.preventDefault();
     var postName = $('#name').val();
       usersRef.push({
