@@ -1,12 +1,43 @@
 header {
-	background-color: #ddd;
+	position: fixed;
+	width: 100%;
+	text-align: left;
+	font-size: 3em;
 	height: 320px;
+	background-color: #ddd;
+	transition: all 1.0s ease;
 }
 
-header img {
+header.sticky {
+	font-size: 24px;
+	line-height: 48px;
+	height: 48px;
+	background: #999;
+	text-align: left;
+	padding-left: 20px;
+}
+
+#photo {
 	float: left;
+	margin-right: 1%;
+	height: 100%;
+	transition: all 1.0s ease;
 }
 
 #about {
-	
+	display: inline;
+}
+
+.message-container {
+	margin-top: 350px;
+}
+
+.this-message {
+	margin: 40px 0;
+}
+
+#test {
+	width: 100%;
+	height: 2px;
+	background-color: rgba(0,0,0,0.3);
 }

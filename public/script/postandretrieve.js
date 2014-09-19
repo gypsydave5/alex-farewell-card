@@ -1,6 +1,7 @@
 var test = new Firebase('https://noxtest.firebaseio.com/test'); //sets which Firebase branch to post to
 
   var usersRef = test.child("users"); //sets the child branch it will be posting to, so test/users in this case
+
   var getUsers = function(){
     $('#bob').empty()
     usersRef.on('value', function(user){
@@ -12,7 +13,6 @@ var test = new Firebase('https://noxtest.firebaseio.com/test'); //sets which Fir
 			}
 		})
 	}
-
 
   $(document).ready( function() {
     getUsers();
