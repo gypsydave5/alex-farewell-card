@@ -12,7 +12,6 @@ var inline_template = $('#message-template').html();
 				var maker = users[name];
 				var template = "<article class='this-message' id='" + name + "'><h1>{{name}}</h1><p>{{message}}</p><h2>{{cohort}}</h2><br></article>";
 				$('.message-container').prepend(Mustache.render(template, maker));
-			   $.modal.close();
       }
 		})
 	}
@@ -28,6 +27,10 @@ var inline_template = $('#message-template').html();
           cohort: $("#cohort").val(),
           message: $("#message").val()
       })
+      $.modal.close();
+      $('#name').val('');
+      $("#message").val('');
+      $("#cohort").val('');
     getUsers();
     });
   })
