@@ -8,7 +8,6 @@ var test = new Firebase('https://noxtest.firebaseio.com/test'); //sets which Fir
 			var template = $('#message-template');
 			var users = user.val();
 			for(name in users){
-				//$('.message-container').append(Mustache.render(template, user[name]));
 				$("<div class='messages' id='" + users[name].name + users[name].cohort + "'>" +'<h1>'+users[name].name + '</h1>' + '<p>' + users[name].message + '</p>' + '<h2>' + users[name].cohort + '</h2></div>').appendTo('.message-container')
 			}
 		})
@@ -16,7 +15,7 @@ var test = new Firebase('https://noxtest.firebaseio.com/test'); //sets which Fir
 
   $(document).ready( function() {
     getUsers();
-   $('#test-post').on('submit', function(e) {
+   $('#post').on('submit', function(e) {
     e.preventDefault();
     var postName = $('#name').val();
       usersRef.push({
