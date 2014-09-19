@@ -1,22 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <link type="text/css" rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="jquery.modal.css" type="text/css" media="screen" />
-    <title>Alex, you're the best!</title>
-  </head>
-      <body>
-      <h1>Good luck, we'll miss you!</h1>
+<head>
+  <meta charset="utf-8">
+  <link type="text/css" rel="stylesheet" href="css/html5-doctor-reset-stylesheet.min.css">
+  <title>test page</title>
+</head>
 
-      <main class="alex-is-fab">
-        <img src="img/alex.jpg">
-        <form class="alex"> </form>
-  
-      </main>
-
-      <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      <script src="jquery.modal.min.js" type="text/javascript" charset="utf-8"></script>
-
-    </body>
+<body>
+  <img src="img/alex.jpg">
+  <form method="POST" id="test-post">
+    <input id="name" placeholder="name">
+    <select id="cohort">
+        <option value="" default selected>Cohort</option>
+        <option value="Sep 2014">September '14</option>
+        <option value="Aug 2014">August '14</option>
+        <option value="Jun 2014">June '14</option>
+        <option value="May 2014">May '14</option>
+        <option value="Mar 2014">March '14</option>
+        <option value="Feb 2014">February '14</option>
+        <option value="Jan 2014">January '14</option>
+        <option value="Nov 2013">November '13</option>
+        <option value="Oct 2013">October '13</option>
+        <option value="Sep 2013">September '13</option>
+        <option value="Jul 2013">July '13</option>
+        <option value="Jun 2013">June '13</option>
+    </select>
+    <input id="message" placeholder="message">
+  <button type="submit">Submit message</button>
+</form>
+<section class="message-container">
+  <article class="this-message">
+    <h1 class="student-name">Spike</h1>
+      <h2 class="student-cohort">Aug 2014</h2>
+          <p class="student-message">Alex, we're gonna miss you, because now we have to figure this shit out ourselves</p>
+  </article>
+  <article class="this-message">
+    <h1 class="student-name">Ruth</h1>
+      <h2 class="student-cohort">Aug 2014</h2>
+          <p class="student-message">Seriously, this stuff is tough</p>
+  </article>
+</section>
+  <script src="script/jquery-2.1.1.min.js"></script>
+  <script src="script/jquery.modal.min.js" type="text/javascript" charset="utf-9"></script>
+  <script src="https://cdn.firebase.com/js/client/1.0.21/firebase.js"></script>
+  <script src="script/firebase-post.js"></script>
+  <script src="script/display-post.js"></script>
+</body>
 </html>
