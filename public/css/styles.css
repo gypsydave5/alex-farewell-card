@@ -4,7 +4,9 @@ header {
 	text-align: left;
 	font-size: 3em;
 	height: 300px;
-	background-color: #ddd;
+  	font-family: 'Open sans', sans serif;
+  	font-weight: 400;
+	background-color: #C5D0C1;
 	transition: all 1.0s ease;
 }
 
@@ -12,13 +14,17 @@ header.sticky {
 	font-size: 24px;
 	line-height: 48px;
 	height: 48px;
-	background: #999;
+	background: #828E8C;
 	text-align: left;
 	padding-left: 20px;
 }
 
 textarea {
 	resize: none;
+}
+
+body {
+  background: #FDF8F2;
 }
 
 #photo {
@@ -49,6 +55,7 @@ textarea {
 	margin: 340px auto 0;
 	max-width: 800px;
 	transition: all 1.0s ease;
+  	font-family: 'Open sans', sans-serif;
 }
 
 .message-container.sticky {

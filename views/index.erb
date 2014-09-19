@@ -3,12 +3,15 @@
 <head>
   <meta charset="utf-8">
   <link type="text/css" rel="stylesheet" href="css/html5-doctor-reset-stylesheet.min.css">
+  <link type="text/css" rel="stylesheet" href="css/temp.css">
   <title>test page</title>
 </head>
 
 <body>
+  <script> DATABASE = '<%= @database %>' </script>
+  <section class="bodycontainer">
   <h1><font size="72px">ALEX'S LEAVING CARD</font></h1>
-  <img src="img/alex.jpg">
+  <img id="Alexface" src="img/alex.jpg">
   <br>
   <br>
   We apologise for the lack of CSS, we are currently hacking away to make it pretty. Please check later this evening to see what Alex received...
@@ -42,7 +45,11 @@
         <option value="Staff">Staff</option>
         <option value="Other">Other</option>
     </select>
-    <input id="message" placeholder="message">
+    <br>
+    <br>
+    <textarea form="test-post" id="message" height="4" cols="50" placeholder="message"></textarea>
+    <br>
+    <br>
   <button type="submit">Submit message</button>
 </form>
 <br>
@@ -56,6 +63,9 @@
     </article>
   </template>
 </section>
+</section>
+<script type="text/javascript" charset="utf-8" src="script/mustache.js"></script>
+
   <script src="script/jquery-2.1.1.min.js"></script>
   <script src="script/jquery.modal.min.js" type="text/javascript" charset="utf-9"></script>
   <script src="https://cdn.firebase.com/js/client/1.0.21/firebase.js" type="text/javascript"></script>
