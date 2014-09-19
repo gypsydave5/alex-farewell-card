@@ -36,56 +36,6 @@
   </header>
   <br clear="all">
   <section class="message-container">
-    <article class="this-message">
-      <h1 class="student-name">Spike</h1>
-      <h2 class="student-cohort">Aug '14</h2>
-      <p class="student-message">Alex, we're gonna miss you, because now we have to figure this shit out ourselves</p>
-    </article>
-    <article class="this-message">
-      <h1 class="student-name">Ruth</h1>
-      <h2 class="student-cohort">Aug '14</h2>
-      <p class="student-message">Seriously, this stuff is tough</p>
-    </article>
-    <article class="this-message">
-      <h1 class="student-name">Ruth</h1>
-      <h2 class="student-cohort">Aug '14</h2>
-      <p class="student-message">Seriously, this stuff is tough</p>
-    </article>
-    <article class="this-message">
-      <h1 class="student-name">Ruth</h1>
-      <h2 class="student-cohort">Aug '14</h2>
-      <p class="student-message">Seriously, this stuff is tough</p>
-    </article>
-    <article class="this-message">
-      <h1 class="student-name">Ruth</h1>
-      <h2 class="student-cohort">Aug '14</h2>
-      <p class="student-message">Seriously, this stuff is tough</p>
-    </article>
-    <article class="this-message">
-      <h1 class="student-name">Ruth</h1>
-      <h2 class="student-cohort">Aug '14</h2>
-      <p class="student-message">Seriously, this stuff is tough</p>
-    </article>
-    <article class="this-message">
-      <h1 class="student-name">Ruth</h1>
-      <h2 class="student-cohort">Aug '14</h2>
-      <p class="student-message">Seriously, this stuff is tough</p>
-    </article>
-    <article class="this-message">
-      <h1 class="student-name">Ruth</h1>
-      <h2 class="student-cohort">Aug '14</h2>
-      <p class="student-message">Seriously, this stuff is tough</p>
-    </article>
-    <article class="this-message">
-      <h1 class="student-name">Ruth</h1>
-      <h2 class="student-cohort">Aug '14</h2>
-      <p class="student-message">Seriously, this stuff is tough</p>
-    </article>
-    <article class="this-message">
-      <h1 class="student-name">Ruth</h1>
-      <h2 class="student-cohort">Aug '14</h2>
-      <p class="student-message">Seriously, this stuff is tough</p>
-    </article>
   </section>
 
   <script src="script/jquery-2.1.1.min.js"></script>
@@ -93,5 +43,35 @@
   <script src="https://cdn.firebase.com/js/client/1.0.21/firebase.js"></script>
   <script src="script/firebase-post.js"></script>
   <script src="script/interface.js"></script>
+  <script>
+  var test = new Firebase('https://noxtest.firebaseio.com/test'); //sets which Firebase branch to post to
+var inline_template = $('#message-template').html();
+
+  var usersRef = test.child("users"); //sets the child branch it will be posting to, so test/users in this case
+
+  var getUsers = function(){
+    $('.message-container').empty()
+    usersRef.on('value', function(user){
+      var users = user.val();
+      for(name in users){
+        $( "<article class='tile'><a id='#" + name + "' rel='modal:open'>" + users[name].name + "</a></article><article class='modal' style='display:none;' id='" + name + "'>" +'<h1>'+users[name].name + '</h1>' + '<h2>' + users[name].cohort + '</h2>' + '<p>' + users[name].message + '</p></article>').prependTo('.message-container')
+      }
+    })
+  }
+
+  $(document).ready( function() {
+    getUsers();
+   $('#post').on('submit', function(e) {
+    e.preventDefault();
+    var postName = $('#name').val();
+      usersRef.push({
+          name: $('#name').val(),
+          cohort: $("#cohort").val(),
+          message: $("#message").val()
+      })
+    getUsers();
+    });
+  })
+  </script>
 </body>
 </html>

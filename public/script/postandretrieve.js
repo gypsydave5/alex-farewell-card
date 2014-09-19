@@ -1,4 +1,4 @@
-var test = new Firebase('https://noxtest.firebaseio.com/test'); //sets which Firebase branch to post to
+var test = new Firebase('https://noxtest.firebaseio.com/' + DATABASE); //sets which Firebase branch to post to
 var inline_template = $('#message-template').html();
 
   var usersRef = test.child("users"); //sets the child branch it will be posting to, so test/users in this case
@@ -10,11 +10,12 @@ var inline_template = $('#message-template').html();
 			var users = user.val();
 			for(name in users){
 				var maker = users[name];
-				var template = '<div class="messages" id="' + name + '"><h1>{{name}}</h1><p>{{message}}</p><h2>{{cohort}}</h2>'
+				var template = "<article id='" + name + "'><h1>{{name}}</h1><p>{{message}}</p><h2>{{cohort}}</h2></article>"
 				$('.message-container').prepend(Mustache.render(template, maker));
 			}
 		})
 	}
+
 
   $(document).ready( function() {
     getUsers();
