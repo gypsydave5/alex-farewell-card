@@ -3,9 +3,9 @@ header {
 	width: 100%;
 	text-align: left;
 	font-size: 3em;
-  font-family: 'Open sans', sans serif;
-  font-weight: 400
-	height: 320px;
+	height: 300px;
+  	font-family: 'Open sans', sans serif;
+  	font-weight: 400;
 	background-color: #C5D0C1;
 	transition: all 1.0s ease;
 }
@@ -19,42 +19,43 @@ header.sticky {
 	padding-left: 20px;
 }
 
+textarea {
+	resize: none;
+}
+
 body {
-  background: #FDF8F2
+  background: #FDF8F2;
 }
 
 #photo {
 	float: left;
-	margin-right: 1%;
+	margin-right: 2%;
 	height: 100%;
 }
 
+#test-post {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -61.5px;
+	margin-left: -230px;
+}
+
 #about {
-	display: inline;
+	display: block;
 }
 
-#message{
-  font-size: 18px;
-  height: 200px;
-  resize: none;
-}
-
-#message.sticky {
-  height: 30px;
-  margin-top
-  transition: all 1.0s ease;
-  resize: none;
-}
-
-form {
-	display: inline;
+#about.sticky {
+	display: none;
+	transition: all 1.0s ease;
 }
 
 .message-container {
 	margin: 340px auto 0;
 	max-width: 800px;
 	transition: all 1.0s ease;
-  font-family: 'Open sans', sans-serif;
+  	font-family: 'Open sans', sans-serif;
 }
 
 .message-container.sticky {
@@ -62,13 +63,9 @@ form {
 }
 
 .this-message {
-	width: 200px;
-	height: 200px;
+	width: 98px;
+	height: 88px;
 	border: solid 1px black;
 	float: left;
-}
-
-#name {
-  font-size: 18px;
-  margin-bottom: 14px;
+	padding: 50px;
 }
