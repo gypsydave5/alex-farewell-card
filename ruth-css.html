@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <link type="text/css" rel="stylesheet" href="public/css/html5-doctor-reset-stylesheet.min.css">
   <link type="text/css" rel="stylesheet" href="public/css/styles.css">
+  <link rel="stylesheet" href="public/css/jquery.modal.css" type="text/css">
   <title>test page</title>
 </head>
 
@@ -13,7 +14,10 @@
     <img id="photo" src="public/img/alex.png">
     <div id="about">Some text.</div>
 
-    <form method="POST" id="test-post">
+    <a href="#test-post" rel="modal:open">Submit</a>
+  </header>
+  <div class="modal" id="test-post">
+    <form method="POST" id="test-form">
       <input id="name" placeholder="name">
       <select id="cohort">
           <option value="" default selected>Cohort</option>
@@ -30,10 +34,10 @@
           <option value="jul13">July '13</option>
           <option value="jun13">June '13</option>
       </select>
-      <input id="message" placeholder="message">
+      <textarea rows="4" cols="50" form="test-form"></textarea>
       <button type="submit">Submit message</button>
     </form>
-  </header>
+  </div>
   <br clear="all">
   <section class="message-container">
     <article class="this-message">
