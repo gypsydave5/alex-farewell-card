@@ -10,6 +10,26 @@ header {
 	transition: all 1.0s ease;
 }
 
+header a {
+	text-decoration: none;
+	color: #B40052 ;
+}
+
+header a:hover {
+	color: #F956A0;
+}
+
+h1 {
+	font-weight: bold;
+	font-size: 1.1em;
+	margin-bottom: 5px;
+}
+
+h2 {
+	font-size: 0.8em;
+	margin-top: 3px;
+}
+
 header.sticky {
 	font-size: 24px;
 	line-height: 48px;
@@ -44,6 +64,7 @@ body {
 
 #about {
 	display: block;
+	margin-bottom: 10px;
 }
 
 #about.sticky {
