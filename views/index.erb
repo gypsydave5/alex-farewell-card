@@ -1,74 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <link type="text/css" rel="stylesheet" href="css/html5-doctor-reset-stylesheet.min.css">
-  <link type="text/css" rel="stylesheet" href="css/temp.css">
-  <title>test page</title>
-</head>
+  <head>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="/css/html5-doctor-reset-stylesheet.min.css">
+    <link type="text/css" rel="stylesheet" href="/css/styles.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/jquery.modal.css" type="text/css">
+    <title>Alex's page</title>
+  </head>
 
-<body>
-  <script> DATABASE = '<%= @database %>' </script>
-  <section class="bodycontainer">
-  <h1><font size="72px">ALEX'S LEAVING CARD</font></h1>
-  <img id="Alexface" src="img/alex.jpg">
-  <br>
-  <br>
-  We apologise for the lack of CSS, we are currently hacking away to make it pretty. Please check later this evening to see what Alex received...
-  <br>
-  <br>
-  If you have messed up your message, please send an e-mail to <a href="mailto:spike01@outlook.com?Subject=Alex%20leaving%20card">Spike</a> with your name and what you messed up and he will do his best to remove it. Then post a correct one!
-  <br>
-  <br>
-  Thank you for taking the time to leave Alex a message! -The leavingCard.js team: Ethel, Ruth, James, Dave and Spike
-  <br>
-  <br>
-  Please leave your message after the &lt;br&gt;:
-  <br>
-  <br>
-  <form method="POST" id="test-post">
-    <input id="name" placeholder="name">
-    <select id="cohort">
-        <option value="" default selected>Tell us who you are!</option>
-        <option value="Sep 2014">September '14</option>
-        <option value="Aug 2014">August '14</option>
-        <option value="Jun 2014">June '14</option>
-        <option value="May 2014">May '14</option>
-        <option value="Mar 2014">March '14</option>
-        <option value="Feb 2014">February '14</option>
-        <option value="Jan 2014">January '14</option>
-        <option value="Nov 2013">November '13</option>
-        <option value="Oct 2013">October '13</option>
-        <option value="Sep 2013">September '13</option>
-        <option value="Jul 2013">July '13</option>
-        <option value="Jun 2013">June '13</option>
-        <option value="Staff">Staff</option>
-        <option value="Other">Other</option>
-    </select>
-    <br>
-    <br>
-    <textarea form="test-post" id="message" height="4" cols="50" placeholder="message"></textarea>
-    <br>
-    <br>
-  <button type="submit">Submit message</button>
-</form>
-<br>
-<br>
-<section class="message-container">
-  <template id="message-template">
-    <article class="this-message">
-      <h1 class="student-name">{{name}}</h1>
-      <h2 class="student-cohort">{{cohort}}</h2>
-      <p class="student-message">{{message}}</p>
-    </article>
-  </template>
-</section>
-</section>
-<script type="text/javascript" charset="utf-8" src="script/mustache.js"></script>
+  <body>
+    <header>
+      <img id="photo" src="../img/alex.png">
+      <div id="about">Good luck Alex!</div>
+      <a href="#test-post" rel="modal:open">Submit</a>
+    </header>
 
-  <script src="script/jquery-2.1.1.min.js"></script>
-  <script src="script/jquery.modal.min.js" type="text/javascript" charset="utf-9"></script>
-  <script src="https://cdn.firebase.com/js/client/1.0.21/firebase.js" type="text/javascript"></script>
-  <script src="script/postandretrieve.js" type="text/javascript"></script>
-</body>
+
+      <form class="modal" method="POST" id="test-post">
+        <input id="name" placeholder="name">
+        <select id="cohort">
+            <option value="" default selected>Cohort</option>
+            <option value="sep14">September '14</option>
+            <option value="aug14">August '14</option>
+            <option value="jun14">June '14</option>
+            <option value="may14">May '14</option>
+            <option value="mar14">March '14</option>
+            <option value="feb14">February '14</option>
+            <option value="jan14">January '14</option>
+            <option value="nov13">November '13</option>
+            <option value="oct13">October '13</option>
+            <option value="sep13">September '13</option>
+            <option value="aug13">August '13</option>
+            <option value="jul13">July '13</option>
+            <option value="jun13">June '13</option>
+            <option value="Staff">Staff</option>
+            <option value="Other">Other</option>
+        </select>
+        <textarea rows="4" cols="50" form="test-form" id="message" placeholder="message"></textarea>
+        <button type="submit">Submit message</button>
+      </form>
+
+    <br clear="all">
+
+    <script> DATABASE = '<%= @database %>' </script>
+    <!-- <section class="bodycontainer"> -->
+   
+  <section class="message-container"></section>
+
+    <script type="text/javascript" charset="utf-8" src="script/mustache.js"></script>
+
+    <script src="script/jquery-2.1.1.min.js"></script>
+    <script src="script/jquery.modal.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdn.firebase.com/js/client/1.0.21/firebase.js" type="text/javascript"></script>
+    <script src="script/postandretrieve.js" type="text/javascript"></script>
+    <script src="script/interface.js"></script>
+  </body>
 </html>
