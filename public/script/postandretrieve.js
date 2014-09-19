@@ -2,11 +2,11 @@ var test = new Firebase('https://noxtest.firebaseio.com/test'); //sets which Fir
 
   var usersRef = test.child("users"); //sets the child branch it will be posting to, so test/users in this case
   var getUsers =    function(){
-    $('#bob').empty()
+    $('.message-container').empty()
     usersRef.on('value', function(user){
     var users = user.val()
     for(name in users){
-      $("<div class='messages' id='" + users[name].name + users[name].cohort + "'>" +'<h1>'+users[name].name + '</h1>' + '<p>' + users[name].message + '</p>' + '<h2>' + users[name].cohort + '</h2></div>').appendTo('#bob')
+      $("<div class='messages' id='" + users[name].name + users[name].cohort + "'><br>" +'<h1>'+users[name].name + '</h1>'  + '<h2>' + users[name].cohort + '</h2></div>'+ '<p>' + users[name].message + '</p>').prependTo('.message-container')
     }
   })
 } 
