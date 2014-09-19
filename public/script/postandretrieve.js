@@ -8,17 +8,16 @@ var inline_template = $('#message-template').html();
     usersRef.on('value', function(user){
 			var users = user.val();
 			for(name in users){
-				var template = '<p>{{cohort}}{{name}}{{message}}</p>';
+				var template = '<div class="messages" id="{{name}}_{{cohort}}"><h1>{{name}}</h1><p>{{message}}</p><h2>{{cohort}}</h2>'
 				var maker = users[name];
 				$('.message-container').prepend(Mustache.render(template, maker));
-				//$("<div class='messages' id='" + users[name].name + users[name].cohort + "'>" +'<h1>'+users[name].name + '</h1>' + '<p>' + users[name].message + '</p>' + '<h2>' + users[name].cohort + '</h2></div>').appendTo('.message-container')
 			}
 		})
 	}
 
   $(document).ready( function() {
     getUsers();
-   $('#test-post').on('submit', function(e) {
+   $('#post').on('submit', function(e) {
     e.preventDefault();
     var postName = $('#name').val();
       usersRef.push({
