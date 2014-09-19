@@ -10,7 +10,7 @@ var inline_template = $('#message-template').html();
 			var users = user.val();
 			for(name in users){
 				var maker = users[name];
-				var template = "<article id='" + name + "'><h1>{{name}}</h1><p>{{message}}</p><h2>{{cohort}}</h2></article>"
+				var template = "<article id='" + name + "'><h1>{{name}}</h1><p>{{message}}</p><h2>{{cohort}}</h2></article><br>"
 				$('.message-container').prepend(Mustache.render(template, maker));
 			}
 		})
