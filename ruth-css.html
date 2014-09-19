@@ -10,7 +10,7 @@
 
 <body>
   <header>
-    <img src="public/img/alex.png">
+    <img id="photo" src="public/img/alex.png">
     <div id="about">Some text.</div>
 
     <form method="POST" id="test-post">
@@ -33,6 +33,7 @@
       <input id="message" placeholder="message">
       <button type="submit">Submit message</button>
     </form>
+    <div id="test"></div>
   </header>
   <br clear="all">
   <section class="message-container">
@@ -46,11 +47,61 @@
       <h2 class="student-cohort">Aug '14</h2>
       <p class="student-message">Seriously, this stuff is tough</p>
     </article>
+    <article class="this-message">
+      <h1 class="student-name">Ruth</h1>
+      <h2 class="student-cohort">Aug '14</h2>
+      <p class="student-message">Seriously, this stuff is tough</p>
+    </article>
+    <article class="this-message">
+      <h1 class="student-name">Ruth</h1>
+      <h2 class="student-cohort">Aug '14</h2>
+      <p class="student-message">Seriously, this stuff is tough</p>
+    </article>
+    <article class="this-message">
+      <h1 class="student-name">Ruth</h1>
+      <h2 class="student-cohort">Aug '14</h2>
+      <p class="student-message">Seriously, this stuff is tough</p>
+    </article>
+    <article class="this-message">
+      <h1 class="student-name">Ruth</h1>
+      <h2 class="student-cohort">Aug '14</h2>
+      <p class="student-message">Seriously, this stuff is tough</p>
+    </article>
+    <article class="this-message">
+      <h1 class="student-name">Ruth</h1>
+      <h2 class="student-cohort">Aug '14</h2>
+      <p class="student-message">Seriously, this stuff is tough</p>
+    </article>
+    <article class="this-message">
+      <h1 class="student-name">Ruth</h1>
+      <h2 class="student-cohort">Aug '14</h2>
+      <p class="student-message">Seriously, this stuff is tough</p>
+    </article>
+    <article class="this-message">
+      <h1 class="student-name">Ruth</h1>
+      <h2 class="student-cohort">Aug '14</h2>
+      <p class="student-message">Seriously, this stuff is tough</p>
+    </article>
+    <article class="this-message">
+      <h1 class="student-name">Ruth</h1>
+      <h2 class="student-cohort">Aug '14</h2>
+      <p class="student-message">Seriously, this stuff is tough</p>
+    </article>
   </section>
 
   <script src="script/jquery-2.1.1.min.js"></script>
   <script src="script/jquery.modal.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="https://cdn.firebase.com/js/client/1.0.21/firebase.js"></script>
   <script src="script/firebase-post.js"></script>
+  <script>
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > 1){  
+        $('header').addClass("sticky");
+      }
+      else{
+        $('header').removeClass("sticky");
+      }
+    });
+  </script>
 </body>
 </html>
