@@ -4,11 +4,43 @@
 <head>
   <meta charset="utf-8">
   <link type="text/css" rel="stylesheet" href="public/css/html5-doctor-reset-stylesheet.min.css">
+  <link type="text/css" rel="stylesheet" href="public/css/styles.css">
   <title>test page</title>
 </head>
 
 <body>
-  <img src="public/img/alex.jpg">
+<<<<<<< HEAD
+  <header>
+    <img src="public/img/alex.jpg">
+    <div id="about">Some text.</div>
+
+    <form method="POST" id="test-post">
+      <input id="name" placeholder="name">
+      <select id="cohort">
+          <option value="" default selected>Cohort</option>
+          <option value="sep14">September '14</option>
+          <option value="aug14">August '14</option>
+          <option value="jun14">June '14</option>
+          <option value="may14">May '14</option>
+          <option value="mar14">March '14</option>
+          <option value="feb14">February '14</option>
+          <option value="jan14">January '14</option>
+          <option value="nov13">November '13</option>
+          <option value="oct13">October '13</option>
+          <option value="sep13">September '13</option>
+          <option value="jul13">July '13</option>
+          <option value="jun13">June '13</option>
+      </select>
+      <input id="message" placeholder="message">
+      <button type="submit">Submit message</button>
+    </form>
+  </header>
+  <br clear="all">
+  <section class="message-container">
+    <article class="this-message">
+      <h1 class="student-name">Spike</h1>
+=======
+  <img src="public/img/alex.png">
   <form method="POST" id="test-post">
     <input id="name" placeholder="name">
     <select id="cohort">
@@ -32,15 +64,17 @@
 <section class="message-container">
   <article class="this-message">
     <h1 class="student-name">Spike</h1>
+>>>>>>> 6bc0937a4ea63f36b9c3768219d875c7d8cf9909
       <h2 class="student-cohort">Aug '14</h2>
-          <p class="student-message">Alex, we're gonna miss you, because now we have to figure this shit out ourselves</p>
-  </article>
-  <article class="this-message">
-    <h1 class="student-name">Ruth</h1>
+      <p class="student-message">Alex, we're gonna miss you, because now we have to figure this shit out ourselves</p>
+    </article>
+    <article class="this-message">
+      <h1 class="student-name">Ruth</h1>
       <h2 class="student-cohort">Aug '14</h2>
-          <p class="student-message">Seriously, this stuff is tough</p>
-  </article>
-</section>
+      <p class="student-message">Seriously, this stuff is tough</p>
+    </article>
+  </section>
+
   <script src="script/jquery-2.1.1.min.js"></script>
   <script src="script/jquery.modal.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="https://cdn.firebase.com/js/client/1.0.21/firebase.js"></script>
