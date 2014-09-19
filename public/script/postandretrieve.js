@@ -3,7 +3,7 @@ var test = new Firebase('https://noxtest.firebaseio.com/test'); //sets which Fir
   var usersRef = test.child("users"); //sets the child branch it will be posting to, so test/users in this case
 
   var getUsers = function(){
-    $('#bob').empty()
+    $('.message-container').empty()
     usersRef.on('value', function(user){
 			var template = $('#message-template');
 			var users = user.val();
