@@ -1,13 +1,15 @@
 var test = new Firebase('https://noxtest.firebaseio.com/test'); //sets which Firebase branch to post to
 
   var usersRef = test.child("users"); //sets the child branch it will be posting to, so test/users in this case
+
   var getUsers = function(){
     $('.message-container').empty()
     usersRef.on('value', function(user){
 			var template = $('#message-template');
 			var users = user.val();
 			for(name in users){
-				$(Mustache.render(template, user[name])).appendTo('.message-container');
+				//$('.message-container').append(Mustache.render(template, user[name]));
+				$("<div class='messages' id='" + users[name].name + users[name].cohort + "'>" +'<h1>'+users[name].name + '</h1>' + '<p>' + users[name].message + '</p>' + '<h2>' + users[name].cohort + '</h2></div>').appendTo('.message-container')
 			}
 		})
 	}
