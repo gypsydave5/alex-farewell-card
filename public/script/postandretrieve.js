@@ -6,10 +6,11 @@ var inline_template = $('#message-template').html();
   var getUsers = function(){
     $('.message-container').empty()
     usersRef.on('value', function(user){
+			var count = 0;
 			var users = user.val();
 			for(name in users){
-				var template = '<div class="messages" id="{{name}}_{{cohort}}"><h1>{{name}}</h1><p>{{message}}</p><h2>{{cohort}}</h2>'
 				var maker = users[name];
+				var template = '<div class="messages" id="' + name + '"><h1>{{name}}</h1><p>{{message}}</p><h2>{{cohort}}</h2>'
 				$('.message-container').prepend(Mustache.render(template, maker));
 			}
 		})
