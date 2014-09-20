@@ -4,5 +4,5 @@ require 'sinatra'
 
 get '/' do
   @database = database
-	erb :index
+  erb :index
 end
