@@ -2,7 +2,6 @@ body {
   	font-family: 'Lato', sans serif;
   	font-weight: 300;
   	background: #FDF8F2;
-  	/*letter-spacing: -1px;*/
 }
 
 header {
@@ -18,25 +17,28 @@ header.sticky {
 	line-height: 43px;
 	height: 48px;
 	background: #828E8C;
-	padding: 3px 15px;
+	padding: 3px 5px;
 }
 
 header a {
 	text-decoration: none;
+	font-weight: 400;
+	text-shadow: 0 0 1px #777;
 	color: #FFF;
 }
 
 header a:hover {
-	font-weight: 400;
 	color: #F956A0;
-	transition: 0.5s;
+	text-shadow: none;
+	transition: 1.0s;
 }
 
 h1 {
 	font-size: 3em;
-	font-weight: 700;
+	font-weight: 300;
 	line-height: 1.5em;
 	letter-spacing: -1px;
+	margin-bottom: 10px;
 }
 
 h2 {
@@ -46,19 +48,45 @@ h2 {
 	margin-bottom: 5px;
 }
 
-.cohort {
-	font-size: 0.8em;
-	margin-top: 3px;
-	font-weight: 400;
+p {
+	line-height: 1.3em;
+}
+
+input {
+	font-family: 'Lato', sans serif;
+	font-weight: 300;
+	font-size: 1em;
+	border: dashed 1px #ddd;
+	padding: 5px 7px;
 }
 
 textarea {
+	font-family: 'Lato', sans serif;
+	font-weight: 300;
+	font-size: 1em;
 	resize: none;
+	border: dashed 1px #ddd;
+	padding: 5px 7px;
+	margin-bottom: 15px;
+}
+
+button {
+	border: none;
+	padding: 6px 10px;
+	background-color: #ddd;
+	font-family: 'Lato', sans serif;
+	font-weight: 300;
+	font-size: 1em;
+}
+
+input:focus, textarea:focus {
+	outline: none;
 }
 
 #photo {
 	float: left;
-	margin-right: 2%;
+	margin-left: 8%;
+	margin-right: 3%;
 	height: 100%;
 }
 
@@ -72,8 +100,8 @@ textarea {
 }
 
 #about {
-	display: block;
 	margin-bottom: 10px;
+	padding: 30px 300px 20px 0;
 }
 
 #about.sticky {
@@ -82,13 +110,22 @@ textarea {
 }
 
 .message-container {
-	margin: 340px auto 0;
+	margin: 340px auto;
 	max-width: 800px;
 	transition: all 1.0s ease;
 }
 
 .message-container.sticky {
 	margin-top: 200px;
+}
+
+.message-preview {
+	width: 98px;
+	height: 68px;
+	float: left;
+	padding: 50px 40px;
+	color: white;
+	text-shadow: 0px 0px 1px #000;
 }
 
 .message-full {
@@ -98,17 +135,46 @@ textarea {
 	left: 50%;
 	margin-top: -61.5px;
 	margin-left: -230px;
-}
-
-.message-preview {
-	width: 98px;
-	height: 68px;
-	border: solid 1px black;
-	float: left;
-	padding: 50px 40px;
-	background-color: #fff;
+	background-color: #FFF;
 }
 
 .message-content {
-	margin: 10px 0;
+	margin: 15px 0;
+}
+
+.cohort {
+	font-size: 0.8em;
+	margin-top: 3px;
+	font-weight: 400;
+}
+
+footer{
+	height: 100px;
+}
+
+.message-preview[id$="a"], .message-preview[id$="b"], .message-preview[id$="c"], .message-preview[id$="d"], .message-preview[id$="Z"], .message-preview[id$="Y"], .message-preview[id$="X"], .message-preview[id$="0"], .message-preview[id$="7"] {
+	background-color: #441519;
+}
+
+.message-preview[id$="e"], .message-preview[id$="f"], .message-preview[id$="g"], .message-preview[id$="h"], .message-preview[id$="U"], .message-preview[id$="V"], .message-preview[id$="W"], .message-preview[id$="1"], .message-preview[id$="8"] {
+	background-color: #B5B3B6;
+}
+
+.message-preview[id$="i"], .message-preview[id$="j"], .message-preview[id$="k"], .message-preview[id$="l"], .message-preview[id$="Q"], .message-preview[id$="R"], .message-preview[id$="S"], .message-preview[id$="T"], .message-preview[id$="2"] {
+	background-color: #BC697B;
+}
+
+.message-preview[id$="m"], .message-preview[id$="n"], .message-preview[id$="o"], .message-preview[id$="p"], .message-preview[id$="M"], .message-preview[id$="N"], .message-preview[id$="O"], .message-preview[id$="P"], .message-preview[id$="3"] {
+	background-color: #9B474D;
+}
+.message-preview[id$="q"], .message-preview[id$="r"], .message-preview[id$="s"], .message-preview[id$="t"], .message-preview[id$="I"], .message-preview[id$="J"], .message-preview[id$="K"], .message-preview[id$="L"] .message-preview[id$="4"] {
+	background-color: #D9A6A8;
+}
+
+.message-preview[id$="u"], .message-preview[id$="v"], .message-preview[id$="w"], .message-preview[id$="E"], .message-preview[id$="F"], .message-preview[id$="G"], .message-preview[id$="H"], .message-preview[id$="5"], .message-preview[id$="9"] {
+	background-color: #190D0D;
+}
+
+.message-preview[id$="x"], .message-preview[id$="y"], .message-preview[id$="z"], .message-preview[id$="A"], .message-preview[id$="B"], .message-preview[id$="C"], .message-preview[id$="D"], .message-preview[id$="6"] {
+	background-color: #A01A22;
 }

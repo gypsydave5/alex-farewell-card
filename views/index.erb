@@ -14,7 +14,7 @@
       <img id="photo" src="img/alex.png">
       <div id="about">
       	<h1>Good luck Alex!</h1>
-      	<p>Alex is leaving Makers Academy after sharing his time, skills, and all-around amazingness with us for the past 14 months. Whether you're a past or present Maker, let him know how much you will miss him!</p>
+      	<p>Alex is leaving Makers Academy after sharing his time, skills, and all-around amazingness with us for the past 14 months. Let him know how much you will miss him!</p>
       </div>
       <a href="#message-input" rel="modal:open">Share your love</a>
     </header>
@@ -39,13 +39,17 @@
           <option value="STAFF">Staff</option>
           <option value="OTHER">Other</option>
       </select>
-      <textarea rows="7" cols="50" form="message-input" id="message-content" placeholder="Insert love here"></textarea>
+      <textarea rows="7" cols="45" form="message-input" id="message-content" placeholder="Insert love here"></textarea>
       <button type="submit">Submit message</button>
     </form>
 
     <br clear="all">
    
   	<section class="message-container"></section>
+
+  	<br clear="all">
+
+  	<footer></footer>
 
     <script> DATABASE = '<%= @database %>' </script>
     <script type="text/javascript" charset="utf-8" src="js/mustache.js"></script>
