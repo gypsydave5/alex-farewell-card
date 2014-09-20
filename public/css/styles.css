@@ -123,9 +123,14 @@ input:focus, textarea:focus {
 	width: 98px;
 	height: 68px;
 	float: left;
+  margin-top: 1px;
+  margin-right: 1px;
+  margin-left: 1px;
+  margin-bottom: 1px;
 	padding: 50px 40px;
-	color: white;
+	color: #494546;
 	text-shadow: 0px 0px 1px #000;
+  border: 1px groove gray;
 }
 
 .message-full {
@@ -153,28 +158,29 @@ footer{
 }
 
 .message-preview[id$="a"], .message-preview[id$="b"], .message-preview[id$="c"], .message-preview[id$="d"], .message-preview[id$="Z"], .message-preview[id$="Y"], .message-preview[id$="X"], .message-preview[id$="0"], .message-preview[id$="7"] {
-	background-color: #441519;
+	background-color: #253939;
 }
 
 .message-preview[id$="e"], .message-preview[id$="f"], .message-preview[id$="g"], .message-preview[id$="h"], .message-preview[id$="U"], .message-preview[id$="V"], .message-preview[id$="W"], .message-preview[id$="1"], .message-preview[id$="8"] {
-	background-color: #B5B3B6;
+	background-color: #558188;
 }
 
 .message-preview[id$="i"], .message-preview[id$="j"], .message-preview[id$="k"], .message-preview[id$="l"], .message-preview[id$="Q"], .message-preview[id$="R"], .message-preview[id$="S"], .message-preview[id$="T"], .message-preview[id$="2"] {
-	background-color: #BC697B;
+	background-color: #FF9C5F;
 }
 
 .message-preview[id$="m"], .message-preview[id$="n"], .message-preview[id$="o"], .message-preview[id$="p"], .message-preview[id$="M"], .message-preview[id$="N"], .message-preview[id$="O"], .message-preview[id$="P"], .message-preview[id$="3"] {
-	background-color: #9B474D;
+	background-color: #FF8B6C;
 }
 .message-preview[id$="q"], .message-preview[id$="r"], .message-preview[id$="s"], .message-preview[id$="t"], .message-preview[id$="I"], .message-preview[id$="J"], .message-preview[id$="K"], .message-preview[id$="L"] .message-preview[id$="4"] {
-	background-color: #D9A6A8;
+	background-color: #C1DAD6;
 }
 
 .message-preview[id$="u"], .message-preview[id$="v"], .message-preview[id$="w"], .message-preview[id$="E"], .message-preview[id$="F"], .message-preview[id$="G"], .message-preview[id$="H"], .message-preview[id$="5"], .message-preview[id$="9"] {
-	background-color: #190D0D;
+	background-color: #C5D0C1;
 }
 
 .message-preview[id$="x"], .message-preview[id$="y"], .message-preview[id$="z"], .message-preview[id$="A"], .message-preview[id$="B"], .message-preview[id$="C"], .message-preview[id$="D"], .message-preview[id$="6"] {
-	background-color: #A01A22;
+	background-color: #828E8C;
+  border-style: groove;
 }
