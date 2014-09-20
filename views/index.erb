@@ -4,39 +4,42 @@
     <meta charset="utf-8">
     <link type="text/css" rel="stylesheet" href="css/html5-doctor-reset-stylesheet.min.css">
     <link type="text/css" rel="stylesheet" href="css/styles.css">
-    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,300italic,400,700' rel='stylesheet' type='text/css'>
     <link type="text/css" rel="stylesheet" href="css/jquery.modal.css">
     <title>Alex's Page</title>
   </head>
 
   <body>
     <header>
-      <img id="photo" src="../img/alex.png">
-      <div id="about">Good luck Alex!</div>
-      <a href="#test-post" rel="modal:open">Share your love</a>
+      <img id="photo" src="img/alex.png">
+      <div id="about">
+      	<h1>Good luck Alex!</h1>
+      	<p>Alex is leaving Makers Academy after sharing his time, skills, and all-around amazingness with us for the past 14 months. Whether you're a past or present Maker, let him know how much you will miss him!</p>
+      </div>
+      <a href="#message-input" rel="modal:open">Share your love</a>
     </header>
 
-    <form class="modal" method="POST" id="test-post">
+    <form class="modal" method="POST" id="message-input">
       <input id="name" placeholder="Name">
       <select id="cohort">
           <option value="" default selected>Tell us who you are!</option>
-          <option value="Sep 2014">September '14</option>
-          <option value="Aug 2014">August '14</option>
-          <option value="Jun 2014">June '14</option>
-          <option value="May 2014">May '14</option>
-          <option value="Mar 2014">March '14</option>
-          <option value="Feb 2014">February '14</option>
-          <option value="Jan 2014">January '14</option>
-          <option value="Nov 2014">November '13</option>
-          <option value="Oct 2013">October '13</option>
-          <option value="Sep 2013">September '13</option>
-          <option value="Aug 2013">August '13</option>
-          <option value="Jul 2013">July '13</option>
-          <option value="Jun 2013">June '13</option>
-          <option value="Staff">Staff</option>
-          <option value="Other">Other</option>
+          <option value="SEP 2014">September '14</option>
+          <option value="AUG 2014">August '14</option>
+          <option value="JUN 2014">June '14</option>
+          <option value="MAY 2014">May '14</option>
+          <option value="MAR 2014">March '14</option>
+          <option value="FEB 2014">February '14</option>
+          <option value="JAN 2014">January '14</option>
+          <option value="NOV 2014">November '13</option>
+          <option value="OCT 2013">October '13</option>
+          <option value="SEP 2013">September '13</option>
+          <option value="AUG 2013">August '13</option>
+          <option value="JUL 2013">July '13</option>
+          <option value="JUN 2013">June '13</option>
+          <option value="STAFF">Staff</option>
+          <option value="OTHER">Other</option>
       </select>
-      <textarea rows="4" cols="50" form="test-form" id="message" placeholder="Insert love here"></textarea>
+      <textarea rows="7" cols="50" form="message-input" id="message-content" placeholder="Insert love here"></textarea>
       <button type="submit">Submit message</button>
     </form>
 

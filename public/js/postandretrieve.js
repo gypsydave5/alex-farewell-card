@@ -1,5 +1,5 @@
 var test = new Firebase('https://noxtest.firebaseio.com/' + DATABASE); //sets which Firebase branch to post to
-var inline_template = $('#message-template').html();
+// var inline_template = $('#message-template').html();
 
 var usersRef = test.child("users"); //sets the child branch it will be posting to, so test/users in this case
 
@@ -10,7 +10,7 @@ var getUsers = function(){
 		var users = user.val();
 		for(name in users){
 			var maker = users[name];
-			var template = "<article class='this-message' id='" + name + "'><h1>{{name}}</h1><p>{{message}}</p><h2>{{cohort}}</h2><br></article>";
+			var template = "<article class='message-full modal' id='" + name + "'><h2>{{name}}</h2><p class='message-content'>{{message}}</p><span class='cohort'>{{cohort}}</span><br></article><a href='#" + name + "' rel='modal:open'><article class='message-preview'><h2>{{name}}</h2><span class='cohort'>{{cohort}}</span><br></article></a>";
 			$('.message-container').prepend(Mustache.render(template, maker));
     }
 	})
@@ -18,17 +18,17 @@ var getUsers = function(){
 
 $(document).ready( function() {
   getUsers();
- $('#test-post').on("submit", function(e) {
+ $('#message-input').on("submit", function(e) {
   e.preventDefault();
   var postName = $('#name').val();
     usersRef.push({
         name: $('#name').val(),
         cohort: $("#cohort").val(),
-        message: $("#message").val()
+        message: $("#message-content").val()
     })
     $.modal.close();
     $('#name').val('');
-    $("#message").val('');
+    $("#message-content").val('');
     $("#cohort").val('');
   getUsers();
   });

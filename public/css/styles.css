@@ -1,50 +1,59 @@
+body {
+  	font-family: 'Lato', sans serif;
+  	font-weight: 300;
+  	background: #FDF8F2;
+  	/*letter-spacing: -1px;*/
+}
+
 header {
 	position: fixed;
 	width: 100%;
-	text-align: left;
-	font-size: 3em;
 	height: 300px;
-  	font-family: 'Open sans', sans serif;
-  	font-weight: 400;
 	background-color: #C5D0C1;
 	transition: all 1.0s ease;
+	padding: 5px;
+}
+
+header.sticky {
+	line-height: 43px;
+	height: 48px;
+	background: #828E8C;
+	padding: 3px 15px;
 }
 
 header a {
 	text-decoration: none;
-	color: #B40052 ;
+	color: #FFF;
 }
 
 header a:hover {
+	font-weight: 400;
 	color: #F956A0;
+	transition: 0.5s;
 }
 
 h1 {
-	font-weight: bold;
-	font-size: 1.1em;
-	margin-bottom: 5px;
+	font-size: 3em;
+	font-weight: 700;
+	line-height: 1.5em;
+	letter-spacing: -1px;
 }
 
 h2 {
-	font-size: 0.8em;
-	margin-top: 3px;
+	font-weight: 700;
+	font-size: 1.1em;
+	line-height: 1em;
+	margin-bottom: 5px;
 }
 
-header.sticky {
-	font-size: 24px;
-	line-height: 48px;
-	height: 48px;
-	background: #828E8C;
-	text-align: left;
-	padding-left: 20px;
+.cohort {
+	font-size: 0.8em;
+	margin-top: 3px;
+	font-weight: 400;
 }
 
 textarea {
 	resize: none;
-}
-
-body {
-  background: #FDF8F2;
 }
 
 #photo {
@@ -53,7 +62,7 @@ body {
 	height: 100%;
 }
 
-#test-post {
+#message-input {
 	display: none;
 	position: fixed;
 	top: 50%;
@@ -76,21 +85,30 @@ body {
 	margin: 340px auto 0;
 	max-width: 800px;
 	transition: all 1.0s ease;
-  	font-family: 'Open sans', sans-serif;
 }
 
 .message-container.sticky {
-	margin-top: 100px;
+	margin-top: 200px;
 }
 
-/*.this-message {
+.message-full {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -61.5px;
+	margin-left: -230px;
+}
+
+.message-preview {
 	width: 98px;
-	height: 88px;
+	height: 68px;
 	border: solid 1px black;
 	float: left;
-	padding: 50px;
-}*/
+	padding: 50px 40px;
+	background-color: #fff;
+}
 
-.this-message {
-	margin-bottom: 15px;
+.message-content {
+	margin: 10px 0;
 }
