@@ -1,36 +1,38 @@
 body {
   	font-family: 'Lato', sans serif;
   	font-weight: 300;
-  	background: #FDF8F2;
+  	color: #FFFFFF;
 }
 
 header {
 	position: fixed;
 	width: 100%;
 	height: 300px;
-	background-color: #C5D0C1;
+	background-color: #666666;
 	transition: all 1.0s ease;
-	padding: 5px;
+	padding: 5px 5px 5px 45px;
 }
 
 header.sticky {
 	line-height: 43px;
 	height: 48px;
-	background: #828E8C;
-	padding: 3px 5px;
+	background-color: rgba(0,0,0,0.7);
+	padding: 3px 5px 3px 160px;
 }
 
 header a {
 	text-decoration: none;
-	font-weight: 400;
-	text-shadow: 0 0 1px #777;
-	color: #FFF;
+	font-weight: 300;
+	font-size: 1.5em;
+	color: #FFFFFF;
 }
 
 header a:hover {
-	color: #F956A0;
-	text-shadow: none;
-	transition: 1.0s;
+	text-decoration: underline;
+}
+
+header p {
+	font-size: 1.2em;
 }
 
 h1 {
@@ -44,19 +46,19 @@ h1 {
 h2 {
 	font-weight: 700;
 	font-size: 1.1em;
-	line-height: 1em;
+	line-height: 1.05em;
 	margin-bottom: 5px;
 }
 
 p {
-	line-height: 1.3em;
+	line-height: 1.35em;
 }
 
 input {
 	font-family: 'Lato', sans serif;
 	font-weight: 300;
 	font-size: 1em;
-	border: dashed 1px #ddd;
+	border: solid 1px #DDDDDD;
 	padding: 5px 7px;
 }
 
@@ -65,7 +67,7 @@ textarea {
 	font-weight: 300;
 	font-size: 1em;
 	resize: none;
-	border: dashed 1px #ddd;
+	border: solid 1px #DDDDDD;
 	padding: 5px 7px;
 	margin-bottom: 15px;
 }
@@ -73,7 +75,7 @@ textarea {
 button {
 	border: none;
 	padding: 6px 10px;
-	background-color: #ddd;
+	background-color: #DDDDDD;
 	font-family: 'Lato', sans serif;
 	font-weight: 300;
 	font-size: 1em;
@@ -86,7 +88,7 @@ input:focus, textarea:focus {
 #photo {
 	float: left;
 	margin-left: 8%;
-	margin-right: 3%;
+	margin-right: 2%;
 	height: 100%;
 }
 
@@ -101,7 +103,7 @@ input:focus, textarea:focus {
 
 #about {
 	margin-bottom: 10px;
-	padding: 30px 300px 20px 0;
+	padding: 30px 320px 20px 0;
 }
 
 #about.sticky {
@@ -123,14 +125,10 @@ input:focus, textarea:focus {
 	width: 98px;
 	height: 68px;
 	float: left;
-  margin-top: 1px;
-  margin-right: 1px;
-  margin-left: 1px;
-  margin-bottom: 1px;
-	padding: 50px 40px;
+  	margin: 1px;
+  	padding: 50px 40px;
 	color: white;
-	text-shadow: 0px 0px 2px #000;
-  border: 1px groove gray;
+	text-shadow: 0px 0px 1px #555;
 }
 
 .message-full {
@@ -141,6 +139,7 @@ input:focus, textarea:focus {
 	margin-top: -61.5px;
 	margin-left: -230px;
 	background-color: #FFF;
+	color: #000;
 }
 
 .message-content {
@@ -158,28 +157,35 @@ footer{
 }
 
 .message-preview[id$="a"], .message-preview[id$="b"], .message-preview[id$="c"], .message-preview[id$="d"], .message-preview[id$="Z"], .message-preview[id$="Y"], .message-preview[id$="X"], .message-preview[id$="0"], .message-preview[id$="7"] {
-	background-color: #253939;
+	/*background-color: #253939;*/
+	background-color: #731626;
 }
 
 .message-preview[id$="e"], .message-preview[id$="f"], .message-preview[id$="g"], .message-preview[id$="h"], .message-preview[id$="U"], .message-preview[id$="V"], .message-preview[id$="W"], .message-preview[id$="1"], .message-preview[id$="8"] {
-	background-color: #558188;
+	/*background-color: #558188;*/
+	background-color: #DBD0C3;
 }
 
 .message-preview[id$="i"], .message-preview[id$="j"], .message-preview[id$="k"], .message-preview[id$="l"], .message-preview[id$="Q"], .message-preview[id$="R"], .message-preview[id$="S"], .message-preview[id$="T"], .message-preview[id$="2"] {
-	background-color: #FF9C5F;
+	/*background-color: #FF9C5F;*/
+	background-color: #C64644;
 }
 
 .message-preview[id$="m"], .message-preview[id$="n"], .message-preview[id$="o"], .message-preview[id$="p"], .message-preview[id$="M"], .message-preview[id$="N"], .message-preview[id$="O"], .message-preview[id$="P"], .message-preview[id$="3"] {
-	background-color: #FF8B6C;
+	/*background-color: #FF8B6C;*/
+	background-color: #8E8E8E;
 }
 .message-preview[id$="q"], .message-preview[id$="r"], .message-preview[id$="s"], .message-preview[id$="t"], .message-preview[id$="I"], .message-preview[id$="J"], .message-preview[id$="K"], .message-preview[id$="L"] .message-preview[id$="4"] {
-	background-color: #C1DAD6;
+	/*background-color: #C1DAD6;*/
+	background-color: #444444;
 }
 
 .message-preview[id$="u"], .message-preview[id$="v"], .message-preview[id$="w"], .message-preview[id$="E"], .message-preview[id$="F"], .message-preview[id$="G"], .message-preview[id$="H"], .message-preview[id$="5"], .message-preview[id$="9"] {
-	background-color: #C5D0C1;
+	/*background-color: #C5D0C1;*/
+	background-color: #A71F2E;
 }
 
 .message-preview[id$="x"], .message-preview[id$="y"], .message-preview[id$="z"], .message-preview[id$="A"], .message-preview[id$="B"], .message-preview[id$="C"], .message-preview[id$="D"], .message-preview[id$="6"] {
-	background-color: #828E8C;
+	/*background-color: #828E8C;*/
+	background-color: #C64644;
 }
