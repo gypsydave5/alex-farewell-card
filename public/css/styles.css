@@ -171,7 +171,7 @@ footer{
 .message-preview[id$="m"], .message-preview[id$="n"], .message-preview[id$="o"], .message-preview[id$="p"], .message-preview[id$="M"], .message-preview[id$="N"], .message-preview[id$="O"], .message-preview[id$="P"], .message-preview[id$="3"] {
 	background-color: #8E8E8E;
 }
-.message-preview[id$="q"], .message-preview[id$="r"], .message-preview[id$="s"], .message-preview[id$="t"], .message-preview[id$="I"], .message-preview[id$="J"], .message-preview[id$="K"], .message-preview[id$="L"] .message-preview[id$="4"] {
+.message-preview[id$="q"], .message-preview[id$="r"], .message-preview[id$="s"], .message-preview[id$="t"], .message-preview[id$="I"], .message-preview[id$="J"], .message-preview[id$="K"], .message-preview[id$="L"], .message-preview[id$="4"] {
 	background-color: #444444;
 }
 
@@ -179,6 +179,6 @@ footer{
 	background-color: #A71F2E;
 }
 
-.message-preview[id$="x"], .message-preview[id$="y"], .message-preview[id$="z"], .message-preview[id$="A"], .message-preview[id$="B"], .message-preview[id$="C"], .message-preview[id$="D"], .message-preview[id$="6"] {
+.message-preview[id$="x"], .message-preview[id$="y"], .message-preview[id$="z"], .message-preview[id$="A"], .message-preview[id$="B"], .message-preview[id$="C"], .message-preview[id$="D"], .message-preview[id$="6"], .message-preview[id$="-"] {
 	background-color: #C64644;
 }
