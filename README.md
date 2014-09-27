@@ -5,7 +5,7 @@ Being [Alex's](https://github.com/alexpeattie) last week at Makers Academy, we (
 The final app can be viewed here: http://alex-farewell-card.herokuapp.com
 
 Technologies used:
-- HTMl5
+- HTML5
 - CSS3
 - JavaScript
 - jQuery
